@@ -53,7 +53,10 @@ The value of square 6 will be based on squares
 matrix, the transition will be based on the 
 square directly to the left. See the end of the 
 transition matrix for the default dictionaries 
-in such a case.
+in such a case. Note: these transition probabilities
+are based on 1) my own knowledge of how golf courses
+should look and 2) a lot of tweaking the matrix to ensure
+that each terrain type didn't dominate any other.
 """
 TRANSITION_MATRIX = {
 	# Fairway transitions
@@ -425,25 +428,28 @@ class GolfHoleDesigner():
 def main():
 	holeDesigner = GolfHoleDesigner(TRANSITION_MATRIX)
 
+	# The below code creates a single hole
+	# and displays it
 	################
-	# Uncomment the below code to create a single hole
-	# and display it
+	holeDesigner.designHole()
+	plt = holeDesigner.createColorMap()
+	plt.show()
+	################
 
-	# holeDesigner.designHole()
-	# plt = holeDesigner.createColorMap()
-	# plt.show()
-	################
+
 	# Uncomment the below code to create a single course
 	# and display it
-
+	################
 	# holeDesigner.designCourse()
 	# plt = holeDesigner.createColorMap(entireCourse=True)
 	# plt.show()
 	################
-	# Uncomment the below code to create 5 examples
-	# and output to a new example directory.
 
-	# holeDesigner.createNExamples('example-courses', 5)
+
+	# Uncomment the below code to create 5 example courses
+	# and output them to a directory.
+	################
+	# holeDesigner.createNExamples('example-courses-2', 5)
 	################
 
 if __name__ == "__main__":
