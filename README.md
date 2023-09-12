@@ -4,8 +4,8 @@
 This program generates a golf hole (or a collection of golf holes) using a Markov Chain. It 
 starts each hole with a small fairway and green, and then expands both to include water, sand, and rough
 based on hard-coded probability distributions (in the future, that could be expanded so that the user 
-could choose how much of each element they wanted in their course). The system uses a Markov Chain
-to select the type of terrian for a piece of the grid based on the three squares to directly to
+could choose how much of each terrain type they wanted in their course). The system uses a Markov Chain
+to select the type of terrian for a piece of the grid based on the three squares directly to
 its left. There are 5 example holes in the `example-holes` directory and 5 example courses in the
 `example-courses` directory.
 
@@ -13,12 +13,11 @@ Note: when viewing an individual hole, the white square on the left is where the
 the light-green patch on the right edge is the green (where the hole is located).
 
 # How to setup and run code
-After cloning this repository, run `python main.py` or `python3 main.py` (depending upon your setup) 
-from the terminal to run the code.
+After cloning this repository, install Numpy and Matplotlib. Then run `python main.py` or `python3 main.py` 
+(depending upon your setup) from the terminal to run the code.
 Currently, the program will create one golf hole and show the diagram. I have put 
 commented-out code in the `main()` function which can be uncommented to create an 
 entire course or to create a given number of example courses and save them to png files. 
-Numpy and Matplotlib must be installed for the code to function properly.
 
 # How this system is personally meaningful to me
 This system is meaningful to me because I really enjoy playing golf, and I especially like
